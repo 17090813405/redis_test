@@ -29,6 +29,8 @@ class RedisApplicationTests {
         zSetOperations.add("zKey", JSONObject.toJSONString(new User("cat2", 2, 1)), 50);
         zSetOperations.add("zKey", JSONObject.toJSONString(new User("cat3", 3, 1)), 25);
         zSetOperations.add("zKey", JSONObject.toJSONString(new User("cat4", 4, 1)), 5);
+
+        zSetOperations.incrementScore("zKey",JSONObject.toJSONString(new User("cat1", 1, 1)),1000);
     }
 
     @Test
